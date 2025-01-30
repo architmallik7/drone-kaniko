@@ -1,4 +1,4 @@
-image: plugins/kaniko-gar:{{#if build.tag}}{{trimPrefix "v" build.tag}}-kaniko1.9.1{{else}}latest-kaniko1.9.1{{/if}}
+image: architmallik/kaniko-gar:{{#if build.tag}}{{trimPrefix "v" build.tag}}-kaniko1.9.1{{else}}latest-kaniko1.9.1{{/if}}
 {{#if build.tags}}
 tags:
 {{#each build.tags}}
@@ -7,12 +7,12 @@ tags:
 {{/if}}
 manifests:
   -
-    image: plugins/kaniko-gar:{{#if build.tag}}{{trimPrefix "v" build.tag}}-{{/if}}linux-amd64-kaniko1.9.1
+    image: architmallik/kaniko-gar:{{#if build.tag}}{{trimPrefix "v" build.tag}}-{{/if}}linux-amd64-kaniko1.9.1
     platform:
       architecture: amd64
       os: linux
   -
-    image: plugins/kaniko-gar:{{#if build.tag}}{{trimPrefix "v" build.tag}}-{{/if}}linux-arm64-kaniko1.9.1
+    image: architmallik/kaniko-gar:{{#if build.tag}}{{trimPrefix "v" build.tag}}-{{/if}}linux-arm64-kaniko1.9.1
     platform:
       architecture: arm64
       os: linux
